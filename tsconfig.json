@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "ES6",
-        "esModuleInterop": true,
+        "target": "ES2020",
+        "module": "ESNext",
         "moduleResolution": "node",
-        "outDir": "./dist",
-        "strict": true
+        "esModuleInterop": true,
+        "strict": true,
+        "declaration": true,
+        "outDir": "dist"
     },
     "include": [
-        "src"
+        "src/**/*.ts"
     ],
     "exclude": [
         "node_modules",
