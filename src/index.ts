@@ -3,44 +3,49 @@ import {
   AdminModel,
   AdminModelName,
   AdminSchema,
-} from "./schemas/Admin";
+} from "./schemas/Admin.js";
 import {
   AnnouncementDoc,
   AnnouncementModel,
   AnnouncementModelName,
   AnnouncementSchema,
-} from "./schemas/Announcement";
+} from "./schemas/Announcement.js";
 import {
   ImageDoc,
   ImageModel,
   ImageModelName,
   ImageSchema,
-} from "./schemas/Image";
+} from "./schemas/Image.js";
 import {
   MessageDoc,
   MessageModel,
   MessageModelName,
   MessageSchema,
-} from "./schemas/Message";
+} from "./schemas/Message.js";
 import {
   MessageThreadDoc,
   MessageThreadModel,
   MessageThreadModelName,
   MessageThreadSchema,
-} from "./schemas/MessageThread";
+} from "./schemas/MessageThread.js";
 import {
   ReadAnnouncementDoc,
   ReadAnnouncementModel,
   ReadAnnouncementModelName,
   ReadAnnouncementSchema,
-} from "./schemas/ReadAnnouncement";
+} from "./schemas/ReadAnnouncement.js";
 import {
   RequestDoc,
   RequestModel,
   RequestModelName,
   RequestSchema,
-} from "./schemas/Request";
-import { UserDoc, UserModel, UserModelName, UserSchema } from "./schemas/User";
+} from "./schemas/Request.js";
+import {
+  UserDoc,
+  UserModel,
+  UserModelName,
+  UserSchema,
+} from "./schemas/User.js";
 
 export {
   AdminDoc,
