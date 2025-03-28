@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, model, models, Schema } from "mongoose";
+import { Model, Schema } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type UserDoc = MongooseDefaults & {
@@ -13,7 +13,7 @@ export type UserDoc = MongooseDefaults & {
 };
 export type UserModel = Model<UserDoc>;
 
-const UserSchema = new Schema<UserDoc, UserModel>(
+export const UserSchema = new Schema<UserDoc, UserModel>(
   {
     clerkId: {
       type: String,
@@ -60,5 +60,4 @@ const UserSchema = new Schema<UserDoc, UserModel>(
   }
 );
 
-export const User: UserModel =
-  models.User || model<UserDoc, UserModel>("User", UserSchema);
+export const UserModelName = "User";

@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, model, models, Schema } from "mongoose";
+import { Model, Schema } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type AnnouncementDoc = MongooseDefaults & {
@@ -8,7 +8,7 @@ export type AnnouncementDoc = MongooseDefaults & {
 };
 export type AnnouncementModel = Model<AnnouncementDoc>;
 
-const AnnouncementSchema = new Schema<AnnouncementDoc>(
+export const AnnouncementSchema = new Schema<AnnouncementDoc>(
   {
     title: {
       type: String,
@@ -28,6 +28,4 @@ const AnnouncementSchema = new Schema<AnnouncementDoc>(
   }
 );
 
-export const Announcement: AnnouncementModel =
-  models.Announcement ||
-  model<AnnouncementDoc, AnnouncementModel>("Announcement", AnnouncementSchema);
+export const AnnouncementModelName = "Announcement";

@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, model, models, Schema, Types } from "mongoose";
+import { Model, Schema, Types } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type MessageDoc = MongooseDefaults & {
@@ -11,7 +11,7 @@ export type MessageDoc = MongooseDefaults & {
 };
 export type MessageModel = Model<MessageDoc>;
 
-const MessageSchema = new Schema<MessageDoc, MessageModel>(
+export const MessageSchema = new Schema<MessageDoc, MessageModel>(
   {
     body: {
       type: String,
@@ -43,5 +43,4 @@ const MessageSchema = new Schema<MessageDoc, MessageModel>(
   }
 );
 
-export const Message: MessageModel =
-  models.Message || model<MessageDoc, MessageModel>("Message", MessageSchema);
+export const MessageModelName = "Message";

@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-const ReadAnnouncementSchema = new Schema({
+import { Schema } from "mongoose";
+export const ReadAnnouncementSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -16,5 +16,4 @@ const ReadAnnouncementSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const ReadAnnouncement = models.ReadAnnouncement ||
-    model("ReadAnnouncement", ReadAnnouncementSchema);
+export const ReadAnnouncementModelName = "ReadAnnouncement";

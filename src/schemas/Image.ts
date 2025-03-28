@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, model, models, Schema } from "mongoose";
+import { Model, Schema } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type ImageDoc = MongooseDefaults & {
@@ -9,7 +9,7 @@ export type ImageDoc = MongooseDefaults & {
 };
 export type ImageModel = Model<ImageDoc>;
 
-const ImageSchema = new Schema<ImageDoc, ImageModel>(
+export const ImageSchema = new Schema<ImageDoc, ImageModel>(
   {
     exerciseId: {
       type: String,
@@ -35,5 +35,4 @@ const ImageSchema = new Schema<ImageDoc, ImageModel>(
   }
 );
 
-export const Image: ImageModel =
-  models.Image || model<ImageDoc, ImageModel>("Image", ImageSchema);
+export const ImageModelName = "Image";

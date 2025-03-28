@@ -22,3 +22,5 @@ export const AdminSchema = new Schema<AdminDoc, AdminModel>(
     timestamps: false,
   }
 );
+
+export const AdminModelName = "Admin";

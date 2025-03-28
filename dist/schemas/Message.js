@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-const MessageSchema = new Schema({
+import { Schema } from "mongoose";
+export const MessageSchema = new Schema({
     body: {
         type: String,
         required: true,
@@ -28,4 +28,4 @@ const MessageSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const Message = models.Message || model("Message", MessageSchema);
+export const MessageModelName = "Message";

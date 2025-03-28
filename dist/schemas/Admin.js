@@ -12,3 +12,4 @@ export const AdminSchema = new Schema({
 }, {
     timestamps: false,
 });
+export const AdminModelName = "Admin";

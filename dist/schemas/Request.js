@@ -1,7 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-import { User } from "./User";
-const RequestSchema = new Schema({
+import { Schema } from "mongoose";
+export const RequestSchema = new Schema({
     responseTime: {
         type: Number,
         required: true,
@@ -9,7 +8,6 @@ const RequestSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         required: true,
-        ref: User,
     },
     endpoint: {
         type: String,
@@ -46,4 +44,4 @@ const RequestSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const Request = models.Request || model("Request", RequestSchema);
+export const RequestModelName = "Request";

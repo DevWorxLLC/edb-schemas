@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-const MessageThreadSchema = new Schema({
+import { Schema } from "mongoose";
+export const MessageThreadSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -12,5 +12,4 @@ const MessageThreadSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const MessageThread = models.MessageThread ||
-    model("MessageThread", MessageThreadSchema);
+export const MessageThreadModelName = "MessageThread";

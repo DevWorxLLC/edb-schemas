@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-const ImageSchema = new Schema({
+import { Schema } from "mongoose";
+export const ImageSchema = new Schema({
     exerciseId: {
         type: String,
         required: true,
@@ -22,4 +22,4 @@ const ImageSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const Image = models.Image || model("Image", ImageSchema);
+export const ImageModelName = "Image";

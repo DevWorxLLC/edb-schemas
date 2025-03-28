@@ -9,3 +9,4 @@ export declare const AdminSchema: Schema<AdminDoc, AdminModel, {}, {}, {}, {}, i
 }> & {
     __v: number;
 }>;
+export declare const AdminModelName = "Admin";

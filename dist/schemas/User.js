@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
-import { model, models, Schema } from "mongoose";
-const UserSchema = new Schema({
+import { Schema } from "mongoose";
+export const UserSchema = new Schema({
     clerkId: {
         type: String,
         required: true,
@@ -43,4 +43,4 @@ const UserSchema = new Schema({
 }, {
     timestamps: false,
 });
-export const User = models.User || model("User", UserSchema);
+export const UserModelName = "User";

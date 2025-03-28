@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, model, models, Schema, Types } from "mongoose";
+import { Model, Schema, Types } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type ReadAnnouncementDoc = MongooseDefaults & {
@@ -8,7 +8,7 @@ export type ReadAnnouncementDoc = MongooseDefaults & {
 };
 export type ReadAnnouncementModel = Model<ReadAnnouncementDoc>;
 
-const ReadAnnouncementSchema = new Schema<
+export const ReadAnnouncementSchema = new Schema<
   ReadAnnouncementDoc,
   ReadAnnouncementModel
 >(
@@ -31,9 +31,4 @@ const ReadAnnouncementSchema = new Schema<
   }
 );
 
-export const ReadAnnouncement: ReadAnnouncementModel =
-  models.ReadAnnouncement ||
-  model<ReadAnnouncementDoc, ReadAnnouncementModel>(
-    "ReadAnnouncement",
-    ReadAnnouncementSchema
-  );
+export const ReadAnnouncementModelName = "ReadAnnouncement";
