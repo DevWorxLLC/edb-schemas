@@ -4,9 +4,14 @@ export type AdminDoc = MongooseDefaults & {
     userId: Types.ObjectId;
 };
 export type AdminModel = Model<AdminDoc>;
-export declare const AdminSchema: Schema<AdminDoc, AdminModel, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, AdminDoc, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<AdminDoc>> & import("mongoose").FlatRecord<AdminDoc> & Required<{
-    _id: Types.ObjectId;
-}> & {
-    __v: number;
-}>;
+export declare const AdminSchema: {
+    userId: {
+        type: typeof Schema.Types.ObjectId;
+        required: boolean;
+    };
+    createdAt: {
+        type: StringConstructor;
+        default: string;
+    };
+};
 export declare const AdminModelName = "Admin";

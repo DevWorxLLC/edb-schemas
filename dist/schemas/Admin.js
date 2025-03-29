@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 import { Schema } from "mongoose";
-export const AdminSchema = new Schema({
+export const AdminSchema = {
     userId: {
         type: Schema.Types.ObjectId,
         required: true,
@@ -9,7 +9,5 @@ export const AdminSchema = new Schema({
         type: String,
         default: DateTime.now().toISO(),
     },
-}, {
-    timestamps: false,
-});
+};
 export const AdminModelName = "Admin";
