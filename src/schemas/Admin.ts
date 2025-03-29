@@ -7,7 +7,7 @@ export type AdminDoc = MongooseDefaults & {
 };
 export type AdminModel = Model<AdminDoc>;
 
-export const AdminSchema: SchemaDefinition = {
+export const AdminSchema: SchemaDefinition<AdminDoc> = {
   userId: {
     type: Schema.Types.ObjectId,
     required: true,
