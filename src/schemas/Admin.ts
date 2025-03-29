@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, Schema, Types } from "mongoose";
+import { Model, Schema, SchemaDefinition, Types } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type AdminDoc = MongooseDefaults & {
@@ -7,20 +7,15 @@ export type AdminDoc = MongooseDefaults & {
 };
 export type AdminModel = Model<AdminDoc>;
 
-export const AdminSchema = new Schema<AdminDoc, AdminModel>(
-  {
-    userId: {
-      type: Schema.Types.ObjectId,
-      required: true,
-    },
-    createdAt: {
-      type: String,
-      default: DateTime.now().toISO(),
-    },
+export const AdminSchema: SchemaDefinition = {
+  userId: {
+    type: Schema.Types.ObjectId,
+    required: true,
   },
-  {
-    timestamps: false,
-  }
-);
+  createdAt: {
+    type: String,
+    default: DateTime.now().toISO(),
+  },
+};
 
 export const AdminModelName = "Admin";
