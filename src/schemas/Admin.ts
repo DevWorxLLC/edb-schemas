@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { Model, Schema, SchemaDefinition, Types } from "mongoose";
+import { Model, Schema, Types } from "mongoose";
 import { MongooseDefaults } from "../types/mongooseDefaults";
 
 export type AdminDoc = MongooseDefaults & {
@@ -7,7 +7,7 @@ export type AdminDoc = MongooseDefaults & {
 };
 export type AdminModel = Model<AdminDoc>;
 
-export const AdminSchema: SchemaDefinition = {
+export const AdminSchema = {
   userId: {
     type: Schema.Types.ObjectId,
     required: true,
